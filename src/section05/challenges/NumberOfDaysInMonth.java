@@ -1,4 +1,4 @@
-package section05;
+package section05.challenges;
 
 public class NumberOfDaysInMonth {
 
