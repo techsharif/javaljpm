@@ -20,4 +20,24 @@ public class Dog extends Animal {
         super.eat();
     }
 
+    @Override
+    public void publicMethod() { // only public possible
+        System.out.println("child public");
+    }
+
+    @Override
+    public void protectedMethod() { // possible both public and protected (not private)
+        System.out.println("child protected");
+    }
+
+//    @Override
+//    public void privateMethod(){ // not possible
+//        System.out.println("child private");
+//    }
+
+    @Override
+    void defaultMethod() { // only possible in same package (public, protected, default)
+        System.out.println("child default");
+    }
+
 }
