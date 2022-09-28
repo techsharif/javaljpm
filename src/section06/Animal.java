@@ -5,6 +5,23 @@ public class Animal {
     private int brain;
     private int size;
 
+
+    private void privateMethod() { // can't override
+        System.out.println("parent private");
+    }
+
+    protected void protectedMethod() { // override possible
+        System.out.println("parent protected");
+    }
+
+    void defaultMethod() { // override possible on same package
+        System.out.println("parent default");
+    }
+
+    public void publicMethod() { // override not possible
+        System.out.println("parent public");
+    }
+
     public Animal(String name, int brain, int size) {
         this.name = name;
         this.brain = brain;
