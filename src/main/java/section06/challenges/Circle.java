@@ -3,7 +3,7 @@ package section06.challenges;
 public class Circle {
     private double radius;
 
-    Circle(double radius) {
+    public Circle(double radius) {
         this.radius = radius < 0 ? 0 : radius;
     }
 
