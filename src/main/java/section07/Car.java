@@ -1,14 +1,16 @@
 package section07;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle { // is a relationship
 
     private int doors;
-    private int engineCapacity;
+    private Door door;
+    private Engine engine; // has a relationship
 
-    public Car(String name, int doors, int engineCapacity) {
+    public Car(String name, int doors, Door door, Engine engine) {
         super(name);
         this.doors = doors;
-        this.engineCapacity = engineCapacity;
+        this.door = door;
+        this.engine = engine;
     }
 
     public int getDoors() {
@@ -19,11 +21,19 @@ public class Car extends Vehicle {
         this.doors = doors;
     }
 
-    public int getEngineCapacity() {
-        return engineCapacity;
+    public Door getDoor() {
+        return door;
     }
 
-    public void setEngineCapacity(int engineCapacity) {
-        this.engineCapacity = engineCapacity;
+    public void setDoor(Door door) {
+        this.door = door;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 }
