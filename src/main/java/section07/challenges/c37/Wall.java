@@ -1,4 +1,4 @@
-package section07.challenges.c07;
+package section07.challenges.c37;
 
 public class Wall {
     private String direction;
