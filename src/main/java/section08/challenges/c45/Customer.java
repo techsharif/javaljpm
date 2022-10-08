@@ -7,7 +7,7 @@ public class Customer {
 
     public Customer(String name, double transaction) {
         this.name = name;
-        this.transaction = transaction;
+        this.transaction = Math.max(transaction, 0);
     }
 
     public String getName() {
@@ -19,6 +19,6 @@ public class Customer {
     }
 
     public void addTransaction(double transaction) {
-
+        this.transaction += Math.max(transaction, 0);
     }
 }
