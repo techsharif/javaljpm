@@ -18,7 +18,7 @@ public class Customer {
         return transaction;
     }
 
-    public void addTransaction() {
+    public void addTransaction(double transaction) {
 
     }
 }
