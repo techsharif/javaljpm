@@ -14,18 +14,15 @@ public class MinimumElement {
 
     private static int readInteger() {
         Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        return number;
+        return scanner.nextInt();
     }
 
     private static int[] readElements(int size) {
         int[] elements = new int[size];
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter number: ");
         for (int i = 0; i < size; i++) {
-            int element = scanner.nextInt();
+            elements[i] = scanner.nextInt();
             scanner.nextLine();
-            elements[i] = element;
         }
         return elements;
 
