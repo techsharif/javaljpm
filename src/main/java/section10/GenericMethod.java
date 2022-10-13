@@ -15,6 +15,12 @@ public class GenericMethod {
     public static <E, F> void print(E itemE, F itemF) { // method
         System.out.println("itemE " + itemE);
         System.out.println("itemF " + itemF);
+
+        // System.out.println(itemE + itemF); // error
+    }
+
+    public static <E extends Number, F extends Number, G extends Number> void print(E itemE, F itemF, G itemG) { // method bounded
+        System.out.println("itemE + itemF + itemG " + itemE + itemF + itemG);
     }
 
 
@@ -31,6 +37,12 @@ public class GenericMethod {
         print(c);
         print(d);
         print(e);
+
+        Integer aa = 1;
+        Integer bb = 2;
+        Integer cc = 3;
+        print(aa, bb, cc);
     }
+
 
 }
