@@ -13,6 +13,8 @@ public class TypeCheck {
         a.add(2);
         a.add(3);
         a.add(5);
+        // a.add("hello"); // error on int cast
+        // a.add(5.2); // error on int cast
 
         print(a);
 
