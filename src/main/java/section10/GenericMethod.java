@@ -12,6 +12,26 @@ public class GenericMethod {
         System.out.println("single " + item);
     }
 
+    // System.out.println(cast(4.5, Float.class));
+    // it will not work
+    public static <E, F> F cast(E item, Class<F> clazz) { // method
+        System.out.println(clazz.toString());
+        return clazz.cast(item);
+    }
+
+    //
+    public static <E, F> F customOutput(E item, Class<F> clazz) {
+        if (clazz.isInstance(item)) {
+            return clazz.cast(item);
+        }
+
+        if (clazz == String.class) {
+            return clazz.cast(item.getClass().toString());
+        }
+
+        return null;
+    }
+
     public static <E, F> void print(E itemE, F itemF) { // method
         System.out.println("itemE " + itemE);
         System.out.println("itemF " + itemF);
@@ -42,6 +62,13 @@ public class GenericMethod {
         Integer bb = 2;
         Integer cc = 3;
         print(aa, bb, cc);
+
+        System.out.println(customOutput(1, Integer.class));
+        ;
+        System.out.println(customOutput(1, Double.class));
+        ;
+        System.out.println(customOutput(1, String.class));
+        ;
     }
 
 
