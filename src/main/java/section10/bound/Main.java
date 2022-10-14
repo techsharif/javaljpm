@@ -34,6 +34,17 @@ class GenericClass4<T extends DummyInterface> { // for interface it's extends no
     }
 }
 
+// basic bounded with interface
+class GenericClass5<T extends ParentClass & DummyInterface> { // for interface and class
+
+    // make sure first item is the class (only one class as java doesn't support multiple inheritance)
+    // there may be multiple interfaces, as java support multiple interface implements
+
+    public void print(T item) {
+        item.dummy();
+    }
+}
+
 
 public class Main {
     public static void main(String[] args) {
@@ -51,6 +62,12 @@ public class Main {
         genericClass4.print(() -> {
             System.out.println("Custom dummy");
         }); // using lambda
+
+        GenericClass5<ChildClassWithDummyInterface> genericClass5 = new GenericClass5<>();
+        // GenericClass5<DummyInterface> genericClass5 = new GenericClass5<>(); // as it's not inherit parent class
+        // GenericClass5<ChildClass> genericClass5 = new GenericClass5<>(); // as it's not implemented dummy interface
+        genericClass5.print(new ChildClassWithDummyInterface(2));
+
 
     }
 }
