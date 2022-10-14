@@ -10,6 +10,9 @@ class GenericClass1<T> {
 
 public class Main {
     public static void main(String[] args) {
+        GenericClass1<Integer> genericClass1 = new GenericClass1<>();
+        genericClass1.print(1);
+
 
     }
 }
