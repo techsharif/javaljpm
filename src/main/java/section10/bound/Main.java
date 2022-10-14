@@ -18,6 +18,14 @@ class GenericClass2<T extends Number> {
     }
 }
 
+// basic bounded with custom class
+class GenericClass3<T extends ParentClass> {
+
+    public void print(T item) {
+        System.out.println(item.getParentData() + 5);
+    }
+}
+
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +34,9 @@ public class Main {
 
         GenericClass2<Integer> genericClass2 = new GenericClass2<>();
         genericClass2.print(5);
+
+        GenericClass3<ParentClass> genericClass3 = new GenericClass3<>();
+        genericClass3.print(new ChildClass(1, 2));
 
     }
 }
