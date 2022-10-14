@@ -26,6 +26,14 @@ class GenericClass3<T extends ParentClass> {
     }
 }
 
+// basic bounded with interface
+class GenericClass4<T extends DummyInterface> { // for interface it's extends not implements
+
+    public void print(T item) {
+        item.dummy();
+    }
+}
+
 
 public class Main {
     public static void main(String[] args) {
@@ -37,6 +45,12 @@ public class Main {
 
         GenericClass3<ParentClass> genericClass3 = new GenericClass3<>();
         genericClass3.print(new ChildClass(1, 2));
+
+        GenericClass4<DummyInterface> genericClass4 = new GenericClass4<>();
+        genericClass4.print(new DummyInterfaceImpl());
+        genericClass4.print(() -> {
+            System.out.println("Custom dummy");
+        }); // using lambda
 
     }
 }
