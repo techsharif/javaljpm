@@ -1,13 +1,12 @@
 package section12.interfacemethods;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class ListInterfaceMethods {
 
     public static void show(List<Integer> list, List<String> strings) {
+
+        System.out.println("======== Show " + list.getClass().getSimpleName() + " ======== ");
 
         // .add
         list.add(5);
@@ -58,6 +57,7 @@ public class ListInterfaceMethods {
         list.remove(list.get(0));
         System.out.println(list.contains(100)); // false
 
+        strings.addAll(Arrays.asList("one", "two", "three", "one"));
         System.out.println(strings); // [one, two, three, one]
         strings.remove("one");
         System.out.println(strings); // [one, two, three, one]
@@ -72,7 +72,8 @@ public class ListInterfaceMethods {
         System.out.println(list.contains(1)); // false
         System.out.println(list); // [4, 2]
 
-        strings = new ArrayList<>(Arrays.asList("one", "two", "three", "one"));
+        strings.clear();
+        strings.addAll(Arrays.asList("one", "two", "three", "one"));
         System.out.println(strings); // [one, two, three, one]
         strings.removeAll(Arrays.asList("one"));
         System.out.println(strings); // [two, three]
@@ -82,6 +83,14 @@ public class ListInterfaceMethods {
         System.out.println(list); // [4, 2]
         list.clear();
         System.out.println(list); // []
+        System.out.println();
 
+    }
+
+    public static void main(String[] args) {
+        show(new ArrayList<>(), new ArrayList<>());
+        show(new LinkedList<>(), new LinkedList<>());
+        show(new Vector<>(), new Vector<>());
+        show(new Stack<>(), new Stack<>());
     }
 }
