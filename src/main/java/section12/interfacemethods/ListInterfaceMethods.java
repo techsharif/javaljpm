@@ -17,6 +17,7 @@ public class ListInterfaceMethods {
         list.add(1, 9);
         System.out.println(list); // [5, 9, 6, 7]
 
+
         // get (with index)
         System.out.println(list.get(2)); // 6
 
@@ -45,10 +46,23 @@ public class ListInterfaceMethods {
         list.remove(0);
         System.out.println(list.contains(11)); // false
 
+
         list.set(0, 100);
         // list.remove(100); // error
         list.remove(list.get(0));
         System.out.println(list.contains(100)); // false
+
+
+        list.add(8);
+        list.add(9);
+        list.add(10);
+        list.add(4);
+        list.add(12);
+
+        System.out.println(list); // [4, 7, 8, 9, 10, 4, 12]
+        System.out.println(list.indexOf(4)); // 0
+        System.out.println(list.lastIndexOf(4)); // 5
+        System.out.println(list.indexOf(40)); // -1
 
 
     }
