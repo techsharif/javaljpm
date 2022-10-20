@@ -55,7 +55,7 @@ public class QueueInterfaceMethods {
         queue.clear();
 
 
-        // element
+        // remove
         try {
             element = queue.remove();
             System.out.println(element);
