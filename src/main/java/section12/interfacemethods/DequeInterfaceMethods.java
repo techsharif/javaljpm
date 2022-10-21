@@ -3,7 +3,7 @@ package section12.interfacemethods;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class DequeInterface {
+public class DequeInterfaceMethods {
 
     public static void show(Deque<Integer> deque, Deque<String> strings) {
         QueueInterfaceMethods.show(deque, strings);

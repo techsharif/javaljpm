@@ -1,7 +1,7 @@
 package section12.linkedlist;
 
+import section12.interfacemethods.DequeInterfaceMethods;
 import section12.interfacemethods.ListInterfaceMethods;
-import section12.interfacemethods.QueueInterfaceMethods;
 
 import java.util.LinkedList;
 
@@ -15,7 +15,7 @@ public class LinkedListInterfaceMethod {
 
         arrayList.clear();
         strings.clear();
-        QueueInterfaceMethods.show(arrayList, strings);
+        DequeInterfaceMethods.show(arrayList, strings);
 
 
     }
