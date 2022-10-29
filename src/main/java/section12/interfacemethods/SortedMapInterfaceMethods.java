@@ -6,7 +6,7 @@ import java.util.TreeMap;
 public class SortedMapInterfaceMethods {
 
     public static void show(SortedMap<String, Integer> sortedMap) {
-//        MapInterfaceMethods.show(sortedMap);
+        MapInterfaceMethods.show(sortedMap);
         sortedMap.clear();
 
         System.out.println("======== SortedMap Show " + sortedMap.getClass().getSimpleName() + " ======== ");
