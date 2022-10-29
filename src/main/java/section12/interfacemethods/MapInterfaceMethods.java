@@ -130,6 +130,17 @@ public class MapInterfaceMethods {
         map.computeIfPresent("forth", ComputeKeyValue::update); // will skip
         System.out.println(map); // {third=3, first=-1, second=-100}
 
+        // forEach
+        map.forEach((key, value) -> {
+            System.out.println("Key " + key + " -> value " + value);
+        });
+
+        /*
+        Key third -> value 3
+        Key first -> value -1
+        Key second -> value -100
+         */
+
         // marge
         map.clear();
         map.merge("books", 1, Integer::sum);
