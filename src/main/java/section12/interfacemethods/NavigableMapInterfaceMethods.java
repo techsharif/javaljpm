@@ -22,6 +22,19 @@ public class NavigableMapInterfaceMethods {
         System.out.println(navigableMap); // {Five=5, Four=4, One=1, Seven=7, Six=6, Three=3, Two=2} // sorted
 
 
+        // overload
+
+        // headMap(key) , tailMap(key)
+        System.out.println(navigableMap.headMap("One")); // {Five=5, Four=4} // less than
+        System.out.println(navigableMap.headMap("One", true)); // {Five=5, Four=4, One=1} // less than or equal
+        System.out.println(navigableMap.tailMap("Seven", false)); // {Six=6, Three=3, Two=2} // greater than
+        System.out.println(navigableMap.tailMap("Seven")); // {Seven=7, Six=6, Three=3, Two=2} // greater than or equal
+
+        // subMap(key1, key2)
+        System.out.println(navigableMap.subMap("One", "Three")); // {One=1, Seven=7, Six=6} // key1 included key2 excluded
+        System.out.println(navigableMap.subMap("One", true, "Three", true)); // {Four=4, One=1, Seven=7, Six=6, Three=3} // All included
+
+
         // descendingMap
         System.out.println(navigableMap.descendingMap()); // {Two=2, Three=3, Six=6, Seven=7, One=1, Four=4, Five=5}
         System.out.println(navigableMap); // {Five=5, Four=4, One=1, Seven=7, Six=6, Three=3, Two=2}
