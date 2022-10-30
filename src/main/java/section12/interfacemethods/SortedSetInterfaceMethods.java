@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class SortedSetInterfaceMethods {
 
     public static void show(SortedSet<Integer> sortedSet, SortedSet<String> strings) {
-        CollectionInterfaceMethods.show(sortedSet, strings);
+        SetInterfaceMethods.show(sortedSet, strings);
 
         System.out.println("======== SortedSet Show " + sortedSet.getClass().getSimpleName() + " ======== ");
 
