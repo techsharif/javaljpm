@@ -38,7 +38,7 @@ class Mark2 implements Comparable<Object> {
 
 }
 
-public class comparable2 {
+public class Comparable2 {
     public static void main(String[] args) {
         Mark2 mark = new Mark2(5);
         Mark2 mark1 = new Mark2(5);
