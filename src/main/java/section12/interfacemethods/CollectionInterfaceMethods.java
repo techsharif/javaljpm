@@ -49,6 +49,15 @@ public class CollectionInterfaceMethods {
         System.out.println(strings); // [two, three]
 
 
+        // retainAll
+        System.out.println(collection); // [5, 6, 7, 2]
+        collection.retainAll(Arrays.asList(9, 6, 7));
+        System.out.println(collection); // [6, 7]
+
+        // hashCode
+        System.out.println(collection.hashCode()); // 1154 // may be changes
+
+
         // Clear
         System.out.println(collection); // [5, 6, 7, 2]
         collection.clear();
