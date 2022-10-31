@@ -17,6 +17,7 @@ public class ThrowsThrow {
         try {
             Scanner scanner = new Scanner(System.in);
             checkThrows(scanner.nextInt());
+            scanner.close();
         } catch (ArithmeticException e) {
             System.out.println("ArithmeticException");
         } catch (CustomException e) {
